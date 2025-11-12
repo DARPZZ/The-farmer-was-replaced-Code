@@ -36,9 +36,7 @@ def sort_current_cactus():
 			swap_counter = 0
 		global swap_counter
 		if swap_counter >52:
-		
 			harvest()
-		quick_print(swap_counter)
 		
 
 
