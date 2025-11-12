@@ -4,12 +4,13 @@ import Dino
 import Drone
 import Unlock
 
-drone_lsit =[]
+#Out comment line 9 and 10 to make The dino run( The default dino world size is 6, you can change this in Dino file)
 #while True:
 	#Dino.dino()
 
 WORLD = get_world_size()
-ZONE_WIDTH = WORLD / 32
+MY_NUMBER_OF_DRONES = 32
+ZONE_WIDTH = WORLD / MY_NUMBER_OF_DRONES
 
 def wavefront_drone_0():
 	wavefront_drone(0)
@@ -120,6 +121,7 @@ def wavefront_drone(zone_index):
 		number_of_pumpkins = num_items(Items.Pumpkin)
 
 		Unlock.all_unlocks()
+		#This farms the default farm can be changed to  "plant_types.plant_cactus_grid()" to farm cactus
 		plant_types.decide_where_to_plant()
 		y = get_pos_y()
 		x = get_pos_x()
